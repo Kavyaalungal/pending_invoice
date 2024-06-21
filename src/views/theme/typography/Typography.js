@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
-import { CButton, CCard } from '@coreui/react';
+import { CButton, CCard, CCardHeader } from '@coreui/react';
 
 const Editinvoice= () => {
   const [labNo, setLabNo] = useState('');
@@ -678,39 +678,20 @@ const handleNewButtonClick = () => {
   return (
     <>
      <CCard className="mb-4">
+     <CCardHeader>
+   
+      <strong style={{ fontSize: '2rem', color: '#523885', fontWeight: 'bold' }}>EDIT INVOICE</strong>
+
+            {/* <Grid item xs={12} sm={8} md={6} lg={4}> */}
+          <Box sx={{ display: 'flex', justifyContent: 'flex-end', gap: '16px' }}>
+              <CButton color="secondary" onClick={handleNewButtonClick}>NEW</CButton>
+              <CButton color="primary" onClick={saveDataToAPI} disabled={!isDataUpdated}>SAVE</CButton>
+            <CButton color="secondary">EXIT</CButton>
+          </Box>
+        {/* </Grid> */}
+          </CCardHeader>
      <div style={{  minHeight: '100vh', padding: '20px'   }}>
-      {/* <Typography
-        variant="h5"
-        component="h1"
-        gutterBottom
-        sx={{
-          padding: '10px',
-          textAlign: 'center', // Center align the text
-        }}
-      >
-        Register Patient
-      </Typography> */}
-      {/* <div style={{ padding: '10px', textAlign: 'center' }}>
-        <TextField
-          name="search"
-          // label="Select Patient by Name, Phone, National ID, Manual Patient ID"
-          variant="outlined"
-          fullWidth
-          value={formData.search}
-          onChange={handleChange}
-          sx={{ mt: 1, mb: 2, width: '100%', maxWidth: '600px', margin: '0 auto' }} // Center the TextField
-          InputProps={{
-            style: { height: '40px' },
-            endAdornment: (
-              <InputAdornment position="end">
-                <SearchIcon />
-              </InputAdornment>
-            ),
-          }}
-          InputLabelProps={{ style: { fontSize: '14px', marginTop: '-3px' } }}
-        />
-      </div> */}
-     <Typography
+     {/* <Typography
               variant="h6"
               sx={{
                 margin: 0,
@@ -720,29 +701,20 @@ const handleNewButtonClick = () => {
               }}
             >
          EDIT INVOICE
-            </Typography>
+            </Typography> */}
       
-        <Grid item xs={12} sm={8} md={6} lg={4}>
+        {/* <Grid item xs={12} sm={8} md={6} lg={4}>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: '16px', marginBottom: '20px' }}>
-            {/* <Button variant="contained" color="primary" className="navbar-button" onClick={handleNewButtonClick}>
-              NEW
-            </Button> */}   <CButton color="secondary" onClick={handleNewButtonClick}>NEW</CButton>
-            {/* <Button variant="contained" color="secondary" className="navbar-button" onClick={saveDataToAPI} disabled={!isDataUpdated}>
-              SAVE
-            </Button> */}   <CButton color="primary" onClick={saveDataToAPI} disabled={!isDataUpdated}>SAVE</CButton>
-            {/* <Button variant="contained" color="default" className="navbar-button">
-              EXIT
-            </Button> */}   <CButton color="secondary">EXIT</CButton>
+              <CButton color="secondary" onClick={handleNewButtonClick}>NEW</CButton>
+              <CButton color="primary" onClick={saveDataToAPI} disabled={!isDataUpdated}>SAVE</CButton>
+            <CButton color="secondary">EXIT</CButton>
           </Box>
-        </Grid>
+        </Grid> */}
      
     <Container component="main" maxWidth="md" >
       <Paper elevation={3} style={{ padding: '16px', borderRadius: '15px' }}>
-      
-        {/* <form onSubmit={handleSubmit}> */}
         <Grid container spacing={2}>
-          
-        <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6}>
               <TextField
                 id="labno"
                 label="Lab No"
@@ -756,8 +728,7 @@ const handleNewButtonClick = () => {
               />
             </Grid>
         
-            
-          {/* <Grid item xs={12} sm={6}>
+        {/* <Grid item xs={12} sm={6}>
           <TextField
           id="branchId"
                 label="Branch Id"
@@ -784,18 +755,6 @@ const handleNewButtonClick = () => {
               />
             </Grid> */}
             <Grid item xs={12} sm={6}>
-              {/* <Button variant="contained" color="primary" onClick={fetchData}
-              style={{
-                // backgroundColor: '#3f51b5', // Blue background
-                color: 'white', // White text
-                fontWeight: 'bold', // Bold text
-                padding: '10px 10px', // Padding
-                borderRadius: '4px', // Rounded corners
-                cursor: 'pointer',
-                marginBottom:'10px' // Pointer cursor on hover
-              }}>
-                Search
-              </Button> */}
                <CButton color="primary" onClick={fetchData}>SEARCH</CButton>
             </Grid>
         </Grid>
@@ -835,19 +794,14 @@ const handleNewButtonClick = () => {
     <InputLabel  sx={{
     fontSize: '0.9rem',
     color: 'rgba(0, 0, 0, 0.6)', 
-    marginTop: '-3px' // Example color
-    // fontWeight: 'bold',          // Example font weight
-    // Add any other styles as needed
+    marginTop: '-3px'
   }}>Prefix</InputLabel>
     <Select
       name="prefix"
       value={prefix}
       onChange={(e) => setPrefix(e.target.value)}
       label="Prefix"
-      sx={{ width: '100%',height:'75%' }}
-       
-      // Adjust the width of the Select box
-    >
+      sx={{ width: '100%',height:'75%' }}>
        <MenuItem value=""><em>None</em></MenuItem>
                     <MenuItem value="Mr">Mr</MenuItem>
                     <MenuItem value="Mrs">Mrs</MenuItem>
@@ -878,7 +832,7 @@ const handleNewButtonClick = () => {
                   color: 'rgba(0, 0, 0, 0.7)',
                   fontSize: '16px',
                   marginTop: '8px',
-                  textAlign: 'right', // aligns the text to the right
+                  textAlign: 'right',
                 }}
               >
                 Age
@@ -970,7 +924,7 @@ const handleNewButtonClick = () => {
                     setIsPhone1Valid(true)
                   }}
                   InputLabelProps={{ style: { fontSize: '14px' } }}
-                   error={!isPhone1Valid} // Apply error style if email is invalid
+                   error={!isPhone1Valid}
                    helperText={!isPhone1Valid ? "Invalid Phone number" : ""}
                 />
               </Grid>
@@ -1001,11 +955,11 @@ const handleNewButtonClick = () => {
                  value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
-                  setIsEmailValid(true); // Reset email validation on change
+                  setIsEmailValid(true);
                 }}
                 InputLabelProps={{ style: { fontSize: '14px' } }}
-                 error={!isEmailValid} // Apply error style if email is invalid
-                 helperText={!isEmailValid ? "Invalid email address" : ""} // Display error message
+                 error={!isEmailValid}
+                 helperText={!isEmailValid ? "Invalid email address" : ""}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -1268,7 +1222,6 @@ const handleNewButtonClick = () => {
             </>
           )}
           </Grid>
-        {/* </form> */}
       </Paper>
     </Container>
      <ToastContainer />

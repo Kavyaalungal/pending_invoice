@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Grid, Paper, TextField, Typography, FormControl, InputLabel, Select, MenuItem, TableContainer, Table, TableHead, TableBody, TableRow, TableCell, Box, FormGroup, FormControlLabel, Checkbox } from '@mui/material';
-import { CButton, CCard } from '@coreui/react';
+import { CButton, CCard, CCardHeader } from '@coreui/react';
 
 const Colors = () => {
   const [error, setError] = useState('');
@@ -27,10 +27,14 @@ const Colors = () => {
 
   return (
     <CCard className="mb-4">
+        <CCardHeader>
+      <strong style={{ fontSize: '2rem',  color: '#523885', fontWeight: 'bold' }}>PENDING COLLECTION</strong>
+    </CCardHeader>
     <div style={{ minHeight: '100vh', padding: '20px' }}>
+    
       <Container maxWidth="lg">
         <Grid container alignItems="center" spacing={2} style={{ marginBottom: '20px' }}>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={12} sm={6}>
             <Typography
               variant="h6"
               sx={{
@@ -42,7 +46,7 @@ const Colors = () => {
             >
               PENDING COLLECTION
             </Typography>
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} sm={6}>
             <Box sx={{ display: 'flex', justifyContent: 'flex-start', gap: '16px', flexWrap: 'wrap' }}>
               <CButton color="primary">PRINT</CButton>
@@ -258,7 +262,6 @@ const Colors = () => {
                   />
                 </Grid>
 
-                {/* Checkbox */}
                 <Grid item xs={12} sm={12}>
                   <TextField
                     id="notes"
@@ -278,7 +281,6 @@ const Colors = () => {
           {/* Right side - Table */}
           <Grid item xs={12} sm={6}>
             <Paper elevation={3} style={{ padding: '16px', borderRadius: '15px', height: '100%' }}>
-              {/* Date fields and buttons */}
               <Grid container spacing={2} alignItems="center">
                 <Grid item xs={12} sm={4}>
                     <TextField 
@@ -301,18 +303,12 @@ const Colors = () => {
                   />
                 </Grid>
                 <Grid item xs={12} sm={4} container alignItems="center" justifyContent="flex-start" spacing={1}>
-                <Grid item>
+                 <Grid item>
                 <CButton color="primary">REFRESH</CButton>
-                  {/* <Button variant="contained" color="primary" size="small" style={{ marginRight: '8px' }}>
-                    REFRESH
-                  </Button> */}
                 </Grid>
                 <Grid item>
                 <CButton color="secondary">PRINT</CButton>
-                  {/* <Button variant="contained" color="default" size="small">
-                    PRINT
-                  </Button> */}
-                </Grid>
+                </Grid> 
               </Grid>
 
    
