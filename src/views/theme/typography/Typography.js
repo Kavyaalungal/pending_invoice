@@ -6,7 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import InputAdornment from '@mui/material/InputAdornment';
 import SearchIcon from '@mui/icons-material/Search';
-import { CButton } from '@coreui/react';
+import { CButton, CCard } from '@coreui/react';
 
 const Editinvoice= () => {
   const [labNo, setLabNo] = useState('');
@@ -677,7 +677,8 @@ const handleNewButtonClick = () => {
 
   return (
     <>
-     <div style={{  minHeight: '100vh', padding: '20px',  }}>
+     <CCard className="mb-4">
+     <div style={{  minHeight: '100vh', padding: '20px'   }}>
       {/* <Typography
         variant="h5"
         component="h1"
@@ -1272,6 +1273,7 @@ const handleNewButtonClick = () => {
     </Container>
      <ToastContainer />
     </div>
+    </CCard>
     </>
   );
 };

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Grid, Paper, TextField, Typography, FormControl, InputLabel, Select, MenuItem, TableContainer, Table, TableHead, TableBody, TableRow, TableCell, Box, FormGroup, FormControlLabel, Checkbox } from '@mui/material';
-import { CButton } from '@coreui/react';
+import { CButton, CCard } from '@coreui/react';
 
-const ThemeView = () => {
+const Colors = () => {
   const [error, setError] = useState('');
   const [isChecked, setIsChecked] = useState(false);
   const [prefix, setPrefix] = useState('');
@@ -26,6 +26,7 @@ const ThemeView = () => {
   ];
 
   return (
+    <CCard className="mb-4">
     <div style={{ minHeight: '100vh', padding: '20px' }}>
       <Container maxWidth="lg">
         <Grid container alignItems="center" spacing={2} style={{ marginBottom: '20px' }}>
@@ -114,7 +115,7 @@ const ThemeView = () => {
                   />
                 </Grid>
 
-                <Grid item xs={12} sm={1}>
+                <Grid item xs={12} sm={2}>
                   <Typography variant="body1" gutterBottom sx={{ fontWeight: 'bold', color: 'rgba(0, 0, 0, 0.7)', fontSize: '16px', marginTop: '8px', textAlign: 'left' }}>
                     Age
                   </Typography>
@@ -149,7 +150,7 @@ const ThemeView = () => {
                     InputLabelProps={{ style: { fontSize: '18px' } }}
                   />
                 </Grid>
-                <Grid item xs={12} sm={3}>
+                <Grid item xs={12} sm={4}>
                   <FormControl fullWidth variant="outlined" sx={{ width: '100%', height: '100%' }}>
                     <InputLabel sx={{ fontSize: '1.2rem', color: 'rgba(0, 0, 0, 0.6)', marginTop: '-6px' }}>Gender</InputLabel>
                     <Select
@@ -385,7 +386,8 @@ const ThemeView = () => {
      
       </Container>
     </div>
+    </CCard>
   );
 };
 
-export default ThemeView;
+export default Colors;
