@@ -10,6 +10,7 @@ import {
   cilNotes,
   cilPencil,
   cilPuzzle,
+  cilSpreadsheet,
   cilSpeedometer,
   cilStar,
 } from '@coreui/icons'
@@ -26,20 +27,20 @@ const _nav = [
       text: 'NEW',
     },
   },
-  {
-    component: CNavTitle,
-    name: 'Theme',
-  },
+  // {
+  //   component: CNavTitle,
+  //   name: 'Theme',
+  // },
   {
     component: CNavItem,
     name: 'Pending Collection',
-    to: '/theme/colors',
-    icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+    to: '/pendingcollection',
+     icon: <CIcon icon={cilSpreadsheet} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'Typography',
-    to: '/theme/typography',
+    name: 'Edit Invoice',
+    to: '/editinvoice',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   // {
