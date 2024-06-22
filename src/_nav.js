@@ -8,6 +8,7 @@ import {
   cilDescription,
   cilDrop,
   cilNotes,
+  cilContact,
   cilPencil,
   cilPuzzle,
   cilSpreadsheet,
@@ -43,21 +44,33 @@ const _nav = [
     to: '/editinvoice',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
+  {
+    component: CNavItem,
+    name: 'Login',
+    to: '/base/accordion',
+    icon: <CIcon icon={cilContact} customClassName="nav-icon" />,
+    
+  },
+  // {
+  //     component: CNavItem,
+  //     name: 'Login',
+  //    to: '/base/accordion',
+  //  },
   // {
   //   component: CNavTitle,
   //   name: 'Components',
   // },
- // {
-   //  component: CNavGroup,
-    // name: 'Base',
-    // to: '/base',
-    // icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
-    // items: [
-      // {
-       //  component: CNavItem,
-        // name: 'Accordion',
-        //to: '/base/accordion',
-     // },
+//  {
+//     component: CNavGroup,
+//     name: 'Base',
+//     to: '/base',
+//     icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+//     items: [
+//       {
+//         component: CNavItem,
+//         name: 'Login',
+//         to: '/base/accordion',
+//      },
      // {
       //  component: CNavItem,
       //  name: 'Breadcrumb',
@@ -128,8 +141,8 @@ const _nav = [
      //   name: 'Tooltips',
      //    to: '/base/tooltips',
    //   },
- //   ],
- // },
+  //  ],
+  // },
   // {
   //   component: CNavGroup,
   //   name: 'Buttons',

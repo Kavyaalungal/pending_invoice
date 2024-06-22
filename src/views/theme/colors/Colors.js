@@ -144,16 +144,16 @@ const Colors = () => {
                     InputLabelProps={{ style: { fontSize: '18px' } }}
                   />
                 </Grid>
-                <Grid item xs={2}>
-                  <TextField
-                    id="yyyy"
-                    label="Year"
-                    variant="outlined"
-                    size="small"
-                    fullWidth
-                    InputLabelProps={{ style: { fontSize: '18px' } }}
-                  />
-                </Grid>
+             <Grid item xs={2}>
+              <TextField
+              id='yyyy'
+              label='Year'
+              variant='outlined'
+              size='small'
+              fullWidth
+              InputLabelProps={{style:{fontSize:'18px'}}}
+              />
+             </Grid>
                 <Grid item xs={12} sm={4}>
                   <FormControl fullWidth variant="outlined" sx={{ width: '100%', height: '100%' }}>
                     <InputLabel sx={{ fontSize: '1.2rem', color: 'rgba(0, 0, 0, 0.6)', marginTop: '-6px' }}>Gender</InputLabel>

@@ -832,7 +832,7 @@ const handleNewButtonClick = () => {
                   color: 'rgba(0, 0, 0, 0.7)',
                   fontSize: '16px',
                   marginTop: '8px',
-                  textAlign: 'right',
+                  textAlign: 'left',
                 }}
               >
                 Age

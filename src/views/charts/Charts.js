@@ -22,7 +22,7 @@ const Charts = () => {
           content="React wrapper component for Chart.js 3.0, the most popular charting library."
         />
       </CCol>
-      <CCol xs={6}>
+      {/* <CCol xs={6}>
         <CCard className="mb-4">
           <CCardHeader>Bar Chart</CCardHeader>
           <CCardBody>
@@ -41,8 +41,8 @@ const Charts = () => {
             />
           </CCardBody>
         </CCard>
-      </CCol>
-      <CCol xs={6}>
+      </CCol> */}
+      {/* <CCol xs={6}>
         <CCard className="mb-4">
           <CCardHeader>Line Chart</CCardHeader>
           <CCardBody>
@@ -71,7 +71,7 @@ const Charts = () => {
             />
           </CCardBody>
         </CCard>
-      </CCol>
+      </CCol> */}
       <CCol xs={6}>
         <CCard className="mb-4">
           <CCardHeader>Doughnut Chart</CCardHeader>
